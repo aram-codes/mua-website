@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website</title>
+   </head>
+   <style>
+ 
+:root {
+  
+  --primary-gold: #c5a059;       
+  --sec-rose: #ebb343;   
+  --hover-color:#efc427;       
+   --text-main: #2d2d2d;
+  --transition-fast: all 0.3s ease;
+  shadow-soft: 0 10px 30px rgba(197, 160, 89, 0.15);
+--transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+} 
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px; /* Base for rem units */
+}
+
+body {
+  background: var(--bg-gradient);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+
+.nav {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 2px solid var(--primary-gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.nav h1 {
+  font-size: clamp(1.2rem, 5vw, 2rem);
+  color: var(--primary-gold);
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav ul a {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  transition: var(--transition-fast);
+}
+
+.nav ul a:hover {
+  color:var(--primary-gold);
+  transform: translateY(-2px);
+}
+
+
+section {
+  padding: clamp(40px, 8vw, 100px) 5%;
+  margin: 0 auto;
+}
+
+
+#home main {
+  display: flex;
+  flex-wrap: wrap; 
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.img {
+  flex: 1 1 300px; 
+  max-width: 550px;
+}
+
+.img img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  border: 8px solid white;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-smooth);
+}
+
+.img img:hover {
+  transform: scale(1.02) rotate(1deg);
+}
+
+.title {
+  flex: 1 1 280px;
+  text-align: center;
+}
+
+.title h2 {
+  font-size: clamp(1.8rem, 6vw, 3.5rem);
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.about-container {
+  background: white;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: var(--shadow-soft);
+  border-left: 10px solid var(--sec-rose);
+}
+
+.section-title {
+  color: var(--sec-rose);
+ 
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.tagline {
+  color: var(--primary-gold);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+}
+
+.about-btn {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 35px;
+  background: var(--sec-rose);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: var(--transition-smooth);
+  box-shadow: 0 5px 15px rgba(255, 117, 140, 0.4);
+}
+
+.about-btn:hover {
+  background:var(--hover-color);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(197, 160, 89, 0.4);
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .title {
+    text-align: left;
+  }
+}
+
+@media (max-width: 350px) {
+  .nav ul {
+    gap: 10px;
+  }
+  
+  .nav ul a {
+    font-size: 0.7rem;
+  }
+  
+  section {
+    padding: 10px 5px;
+  }
+}
+
+@media (min-width: 1471px) {
+  body {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+    margin: 0 auto;
+  }
+}
+
+
+.contact-details{
+  font-size: 19px;
+}
+.contact-title{
+  font-size:38px;
+}
+.contact-container{
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+.contact-container ul{
+  list-style-type: none;
+}
+
+   </style>
+     <body>
+      <!-- NAV -->
+     <nav class="nav">
+        <ul>
+            <a href="#home"> <li>Home</li></a>
+          <a href="#about"><li>About</li></a>
+           <a href="#contact"><li>Contact</li></a>
+          <a href="#services"><li>Services</li></a>
+        </ul>
+    <h1>MAKEUP ARTIST</h1>
+     </nav>
+<!-- HOME SECTION -->
+     <section id="home">
+       <main>
+        <div class="img"><img src="makeup.webp" alt=""></div>
+        <div class="title">
+            <h2>Timeless Beauty, Tailored for Your Most Iconic Moments.</h2>
+        </div>
+      </main>
+     </section>
+
+     <!-- ABOUT SECTION -->
+     
+    <section id="about">
+  <div class="about-container">
+    
+    <!--ABOUT TEXT SIDE -->
+    <div class="about-content">
+      <h2 class="section-title">The Artist</h2>
+      <p class="tagline">Crafting Confidence through Artistry</p>
+      <p class="description">
+        With over 5 years of experience in the beauty industry, I specialize in 
+        creating timeless looks that celebrate your natural features. Whether it's 
+        your wedding day or a high-fashion editorial, my mission is to make you 
+        feel like the most radiant version of yourself.
+      </p>
+      <div class="signature">With love, [Your Name]</div>
+      <a href="#services" class="about-btn">View My Work Details</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+    <div class="contact-container">
+  <div class="contact-info">
+    <h2 class="section-title">Get in Touch</h2>
+    <p class="contct-title">Ready to book your session?</p>
+    <ul class="contact-details">
+      <li><strong>Email:</strong> hello@artistname.com</li>
+      <li><strong>Phone:</strong> +1 (555) 123-4567</li>
+      <li><strong>Location:</strong> Studio 42, Downtown</li>
+      <li><strong>Instagram:</strong>artistname02</li>
+      <li><strong>Whatapp:</strong>+91 0000000000</li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- SERVICES SECTION -->
+ <section id="services">
+<div class="services-container">
+<h2 class="section-title">My Services</h2>
+<p class="tagline">Professional Artistry for Every Occasion</p>
+ <div class="services-grid">
+<div class="service-card">
+ <h3>Bridal Makeup</h3>
+<p>Long-lasting, camera-ready looks tailored for your big day.</p>
+<span class="price">Starting at 5000rs.</span>
+</div>
+
+ <div class="service-card">
+ <h3>Editorial & Glam</h3>
+ <p>High-fashion looks for photoshoots, events, and galas.</p>
+<span class="price">Starting at 10,000rs.</span>
+ </div>
+<div class="service-card">
+ <h3>Makeup Lessons</h3>
+ <p>One-on-one sessions to master your own daily routine.</p>
+ <span class="price">Starting at 7000rs.</span>
+</div>
+ </div>
+</section>
+
+</body>
+</html>   
+            
